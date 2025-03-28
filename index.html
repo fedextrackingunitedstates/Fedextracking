@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FedEx Tracking</title>
+    <link rel="stylesheet" href="/tracking.html">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #ffffff;
+            background-image: url(/download.webp);
+            background-size: 1200px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #4d148c;
+        }
+        .header img {
+            height: 40px;
+        }
+        .user-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #4d148c;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .menu-item {
+            width: 150px;
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .menu-item svg {
+            width: 40px;
+            height: 40px;
+        }
+        .menu-item.active {
+            background-color: #4d148c;
+            color: white;
+        }
+        .tracking-box {
+            margin-top: 20px;
+        }
+        .tracking-box input {
+            width: 250px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .tracking-box button {
+            background-color: #ff6600;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="header">
+        <img src="/download.png" alt="FedEx">
+        <div class="user-icon">👤</div>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to FedEx</h1>
+
+        <div class="menu">
+            <div class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 116 116" class="fxg-cube_icon" tabindex="-1" focusable="false">
+                    <polygon fill="none" stroke="black" stroke-width="4" points="89.69 47.24 89.69 28.5 45.39 7.17 1 28.5 1 71.16 45.39 92.49 57.9 86.47"/>
+                    <polyline fill="none" stroke="black" stroke-width="4" points="1 28.5 45.39 50.89 89.69 28.5"/>
+                    <line x1="45.39" y1="50.89" x2="45.39" y2="92.49" stroke="black" stroke-width="4"/> </svg>
+                <p>SHIP</p>
+            </div>
+            <div class="menu-item active">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 116 116" class="fxg-cube_icon" tabindex="-1" focusable="false">
+                    <!-- Cube Shape -->
+                    <polygon fill="none" stroke="black" stroke-width="4" points="89.69 47.24 89.69 28.5 45.39 7.17 1 28.5 1 71.16 45.39 92.49 57.9 86.47"/>
+                    <polyline fill="none" stroke="black" stroke-width="4" points="1 28.5 45.39 50.89 89.69 28.5"/>
+                    <line x1="45.39" y1="50.89" x2="45.39" y2="92.49" stroke="black" stroke-width="4"/>
+                    
+                    <!-- Magnifying Glass -->
+                    <circle cx="70" cy="70" r="12" stroke="black" stroke-width="4" fill="none"/>
+                    <line x1="78" y1="78" x2="90" y2="90" stroke="black" stroke-width="4"/>> </svg>
+                <p>TRACK</p>
+            </div>
+            <div class="menu-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 116 116" class="fxg-cube_icon" tabindex="-1" focusable="false">
+                    <!-- Cube Shape -->
+                    <polygon fill="none" stroke="black" stroke-width="4" points="89.69 47.24 89.69 28.5 45.39 7.17 1 28.5 1 71.16 45.39 92.49 57.9 86.47"/>
+                    <polyline fill="none" stroke="black" stroke-width="4" points="1 28.5 45.39 50.89 89.69 28.5"/>
+                    <line x1="45.39" y1="50.89" x2="45.39" y2="92.49" stroke="black" stroke-width="4"/>
+                    
+                    <!-- Calculator Icon -->
+                    <rect x="10" y="55" width="25" height="35" fill="none" stroke="black" stroke-width="3"/>
+                    <line x1="15" y1="62" x2="30" y2="62" stroke="black" stroke-width="3"/>
+                    <line x1="15" y1="68" x2="30" y2="68" stroke="black" stroke-width="3"/>
+                    <circle cx="17" cy="76" r="2" fill="black"/>
+                    <circle cx="23" cy="76" r="2" fill="black"/>
+                    <circle cx="29" cy="76" r="2" fill="black"/>
+                    <circle cx="17" cy="82" r="2" fill="black"/>
+                    <circle cx="23" cy="82" r="2" fill="black"/>
+                    <circle cx="29" cy="82" r="2" fill="black"/>></svg>
+                <p>RATE & TRANSIT TIMES</p>
+            </div>
+        </div>
+
+        <div class="tracking-box">
+            <input type="text" id="trackingNumber" placeholder="TRACKING ID">
+            <button onclick="trackPackage()">TRACK</button>
+        </div>
+
+        <p class="error-message" id="errorMessage">Invalid Tracking Number</p>
+    </div>
+<script>
+    function trackPackage() {
+        var input = document.getElementById("trackingNumber").value.trim();
+        if (input === "281442392830") { // Valid tracking ID
+            window.location.href = "tracking.html?trackingId=" + input;
+        } else {
+            document.getElementById("errorMessage").style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

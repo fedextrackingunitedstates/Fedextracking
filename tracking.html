@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FedEx Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .header {
+            background-color: #4B0082;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            width: 150px; /* Space reserved for logo */
+            height: auto;
+        }
+        .header a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .left-section {
+            text-align: left;
+            width: 40%;
+        }
+        .right-section {
+            text-align: left;
+            width: 50%;
+        }
+        .status {
+            color: blue;
+            display: flex;
+            align-items: center;
+        }
+        .status::after {
+            content: '\25B6'; /* Blue arrow */
+            color: blue;
+            margin-left: 5px;
+        }
+        .package-details {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .timeline {
+            border-left: 4px solid purple;
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="download.png" alt="FedEx Logo" class="logo">
+        <div>
+            <a href="#">Track status</a>
+            <a href="#">FAQs</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="left-section">
+            <h3>Schedule Delivery Date;</h3>
+            <h1>Tuesday</h1>
+        </div>
+        <div class="right-section">
+            <h3>Delivery Status: <span class="status">In Transit</span></h3>
+            <h4>Tracking ID: 281442392830</h4>
+        </div>
+    </div>
+    <div class="package-details">
+        <p><strong>Package Received by FedEx</strong><br>FedEx Ground<br>02/03/2025 09:00 AM</p>
+        <p><em>Label Created</em><br>02/03/2025 09:00 AM</p>
+        <h3>Package Details</h3>
+        <p><strong>Package:</strong> CASH PACKAGE</p>
+        <p><strong>Receiver Name:</strong> Carmen Quintana Garcia</p>
+        <p><strong>Receiver Address:</strong> Carretera 3 parcelas nuevas calle Capitan 296 Punta Santiago PR</p>
+        <p><strong>Sender Name:</strong> Agent Kathy Garza</p>
+        <p><strong>Sender Address:</strong> Washington DC</p>
+        <p><strong>Scheduled Pickup Date:</strong> 02/04/2025 06:30 PM</p>
+    </div>
+    <div class="timeline">
+        <p><strong>From:</strong> Washington DC</p>
+        <p> <i>Signature Required</i></p>
+       
+    </div>
+</body>
+</html>
