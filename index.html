@@ -12,7 +12,7 @@
             padding: 0;
             text-align: center;
             background-color: #ffffff;
-            background-image: url(download.webp);
+            background-image: url(/download.webp);
             background-size: 1200px;
         }
         
@@ -150,7 +150,7 @@
     function trackPackage() {
         var input = document.getElementById("trackingNumber").value.trim();
         if (input === "281442392830") { // Valid tracking ID
-            window.location.href = "tracking.html?trackingId=" + input;
+            window.location.href = "tracking.html?trackingId";
         } else {
             document.getElementById("errorMessage").style.display = "block";
         }
