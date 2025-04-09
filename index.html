@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FedEx Tracking</title>
-    <link rel="stylesheet" href="/tracking.html">
+    <link rel="stylesheet" href="tracking.html">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,8 +12,8 @@
             padding: 0;
             text-align: center;
             background-color: #ffffff;
-            background-image: url(download.webp);
-            background-size: 1200px;
+            background-image:url(download.webp);
+            background-size:10cm;
         }
         
         .header {
@@ -27,8 +27,8 @@
             height: 40px;
         }
         .user-icon {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             background-color: white;
             border-radius: 50%;
             display: flex;
@@ -39,6 +39,8 @@
         }
         .container {
             margin-top: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
         }
         .menu {
             display: flex;
@@ -86,16 +88,60 @@
             margin-top: 10px;
             display: none;
         }
-    </style>
+    
+      .footer {
+      background-color: #1a1a1a;
+      color: white;
+      padding:20px;
+      text-align: left;
+      align-items: center;
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      height:250px;
+      margin-top:10px;
+      
+      }
+     .footer-logo {
+      width:50px;
+      height:50px;
+
+      }
+     /* .sections {
+      display: flex; */
+      /* flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      } */
+    
+       .sections ul li{
+      list-style: none;
+      color: #ccc;
+      margin-top:10px;
+      justify-content: space-between;
+      }
+      .Adedayo-1 ul li {
+      margin-top:10px;
+      color: #ccc;
+      list-style: none;
+      justify-content: space-between;
+      
+     }
+      .copyright {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+      }
+   </style>
+   
 </head>
 <body>
- 
-    <div class="header">
+ <div class="header">
         <img src="download.png" alt="FedEx">
-        <div class="user-icon">👤</div>
-    </div>
-
-    <div class="container">
+        <div class="user-icon"><img src="/profile.svg" alt=""></div>
+ </div>
+ <div class="container">
         <h1>Welcome to FedEx</h1>
 
         <div class="menu">
@@ -145,17 +191,40 @@
         </div>
 
         <p class="error-message" id="errorMessage">Invalid Tracking Number</p>
-    </div>
-<script>
-    function trackPackage() {
+ </div>
+ <script>
+     function trackPackage() {
         var input = document.getElementById("trackingNumber").value.trim();
         if (input === "281442392830") { // Valid tracking ID
             window.location.href = "tracking.html?trackingId";
         } else {
             document.getElementById("errorMessage").style.display = "block";
         }
-    }
-</script>
-
+     }
+ </script>
+   <footer class="footer">
+     <img src="download.png" alt="" class="footer-logo ">
+     <div class="copyright">
+         &copy; 2025
+      </div>
+     <div class="sections">
+          <ul>
+             <li>Home</li>
+             <li>Features</li>
+             <li>Pricing</li>
+             <li>FAQs</li>
+             <li>About</li>
+         </ul>
+     </div>
+      <div class="Adedayo-1"> 
+          <ul>
+             <li>Home</li>
+             <li>Features</li>
+             <li>Pricing</li>
+             <li>FAQs</li>
+             <li>About</li>
+          </ul>
+      </div> 
+  </footer>
 </body>
 </html>
