@@ -15,6 +15,14 @@
       margin: auto;
     }
 
+    .header {
+      background-color: #4d148c;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     .left-section {
       display: flex;
@@ -219,7 +227,6 @@
       </div>
       <div class="hamburger" style="font-size: 22px; cursor: pointer;">☰</div>
     </div>
-    
   
   </div>
   <!-- FedEx-style Progress Timeline -->
@@ -276,24 +283,24 @@
     </ul>
   </div>
   <script>
-  let logoutTimer;
-
-  function resetLogoutTimer() {
-    clearTimeout(logoutTimer);
-    logoutTimer = setTimeout(() => {
-      // Redirect to logout or home page
-      window.location.href = "index.html"; // change to your logout URL if needed
-    }, 60000); // 1 minute = 60000 milliseconds
-  }
-
-  // Events that reset the timer
-  ['click', 'mousemove', 'keydown', 'scroll', 'touchstart'].forEach(event => {
-    document.addEventListener(event, resetLogoutTimer);
-  });
-
-  // Start the timer when the page loads
-  resetLogoutTimer();
-</script>
+    let logoutTimer;
+  
+    function resetLogoutTimer() {
+      clearTimeout(logoutTimer);
+      logoutTimer = setTimeout(() => {
+        // Redirect to logout or home page
+        window.location.href = "index.html"; // change to your logout URL if needed
+      }, 60000); // 1 minute = 60000 milliseconds
+    }
+  
+    // Events that reset the timer
+    ['click', 'mousemove', 'keydown', 'scroll', 'touchstart'].forEach(event => {
+      document.addEventListener(event, resetLogoutTimer);
+    });
+  
+    // Start the timer when the page loads
+    resetLogoutTimer();
+  </script>
 
 </body>
 </html>
